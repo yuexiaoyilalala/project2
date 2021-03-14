@@ -53,4 +53,15 @@ public class Person extends Creature<String> implements Comparable<String>,MyInt
     {
         return 0;
     }
+
+    private static void showDesc()
+    {
+        System.out.println("可爱的人");
+    }
+
+    @Override
+    public String toString()
+    {
+        return "Person{" + "name='" + name + '\'' + ", age=" + age + ", id=" + id + '}';
+    }
 }

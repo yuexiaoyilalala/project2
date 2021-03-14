@@ -94,6 +94,7 @@ public class ReflectionTest
         System.out.println(clazz2);//class com.kelly.java.Person
 
         //方式三：调用Class的静态方法：forName(String classPath)
+        //体现反射的动态性
         Class clazz3 = Class.forName("com.kelly.java.Person");
         System.out.println(clazz3);//class com.kelly.java.Person
 

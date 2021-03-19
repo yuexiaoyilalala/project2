@@ -63,17 +63,17 @@ public class StringTest1
      {
           String str1 = "abc123中国";
           byte[] bytes = str1.getBytes();//使用默认的字符集，进行编码
-          System.out.println(Arrays.toString(bytes));
+          System.out.println(Arrays.toString(bytes));//[97, 98, 99, 49, 50, 51, -28, -72, -83, -27, -101, -67]
           byte[] gbks = str1.getBytes("gbk");//使用gbk字符集进行编码
-          System.out.println(Arrays.toString(gbks));
+          System.out.println(Arrays.toString(gbks));//[97, 98, 99, 49, 50, 51, -42, -48, -71, -6]
 
           String str2 = new String(bytes);//使用默认的字符集，进行解码
-          System.out.println(str2);
+          System.out.println(str2);//abc123中国
 
-          String str3 = new String(gbks);
+          String str3 = new String(gbks);//abc123�й�
           System.out.println(str3);//出现乱码。原因：编码集和解码集不一致
 
-          String str4 = new String(gbks, "gbk");
+          String str4 = new String(gbks, "gbk");//abc123中国
          System.out.println(str4);//没有乱码。原因：编码集和解码集一致
      }
 }
